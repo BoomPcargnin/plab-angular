@@ -1,0 +1,6 @@
+<app-header (changeView)="OnChangeView($event)" [active]="view"></app-header>
+
+<div class="container">
+  <app-recipes *ngIf="view=='recipes'"></app-recipes>
+  <app-ingredients *ngIf="view=='ingredients'"></app-ingredients>
+</div>

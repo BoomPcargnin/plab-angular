@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-12 text-right">
+        <div class="btn btn-primary" (click)="onShowRecipeForm()">Aggiungi nuova ricetta</div>
+    </div>
+    <app-recipe-form *ngIf="showRecipeForm"></app-recipe-form>
+
+    <div class="col-md-6">
+        <app-recipe-list-item *ngFor="let recipe of recipes" (click)="onSelectRecipe(recipe)" [recipe]="recipe"></app-recipe-list-item>
+    </div>
+    <div class="col-md-6" *ngIf="activeRecipe">
+        <app-recipe-detail [recipe]="activeRecipe"></app-recipe-detail>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <div
+            class="nav-link"
+            [ngClass]="{'active': active === 'recipes'}"
+            (click)="onButtonClick('recipes')">Ricette</div>
+    </li>
+
+    <li class="nav-item">
+        <div
+            class="nav-link"
+            [ngClass]="{'active': active === 'ingredients'}"
+            (click)="onButtonClick('ingredients')">Ingredienti</div>
+    </li>
+</ul>
